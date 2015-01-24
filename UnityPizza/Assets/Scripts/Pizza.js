@@ -1,6 +1,12 @@
 ﻿#pragma strict
 
-var ingredients = new Array();
+//var ingredients = new Array();
+var dough: GameObject;
+
+var cheese: Ingredient;
+var sauce: Ingredient;
+var olive: Ingredient;
+var onion: Ingredient;
 
 // SINGLETON START
 
@@ -12,19 +18,17 @@ static function Instance () : Pizza {
 
 function Start () {
 	theInstance = this;
+	
+	// esto no tiene sentido
+	dough.renderer.enabled = true;
 }
 
 // SINGLETON END
 
-function AddIngredient (ingredient: GameObject) {
-	ingredients.Push(ingredient);
-	ingredient.renderer.enabled = true;
-}
-
-function ClearIngredients () {
+function ResetIngredients () {
 	
-	for(var ingredient : GameObject in ingredients) {
-        ingredient.renderer.enabled = false;
-    }
-	ingredients = new Array();
+	cheese.Reset();
+	sauce.Reset();
+	olive.Reset();
+	onion.Reset();
 }

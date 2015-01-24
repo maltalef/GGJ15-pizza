@@ -1,23 +1,26 @@
 ﻿#pragma strict
 
-public var ingredient: GameObject;
+public var ingredient: Ingredient;
 public var amount = 10;
+public var sprite: GameObject;
 
-function Awake () {
+function OnMouseDown () {
+
+	if (amount == 0)
+		return;
+	
+	if (ingredient.CanUse()) {
+		amount--;
+		ingredient.Use(true);
+		UpdateSprite();
+	}
+		
+	
 	
 }
 
-function Start () {
+function UpdateSprite () {
 	
-}
-
-function Update () {
-	
-}
-
-function OnMouseDown() {
-
-//	Debug.Log(Pizza.Instance());
-//	Debug.Log(ingredient);
-	Pizza.Instance().AddIngredient(ingredient);
+	var scale = amount / 10f;
+	sprite.transform.localScale = new Vector3(scale, scale, scale);
 }

@@ -1,5 +1,5 @@
 ﻿#pragma strict
 
 function OnMouseDown () {
-	Pizza.Instance().ClearIngredients();
+	Pizza.Instance().ResetIngredients();
 }

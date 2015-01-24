@@ -13,10 +13,3 @@
 //}
 //
 //// SINGLETON END
-//
-//function Update () {
-//
-//}
-//
-//function MakeSomePizza () {
-//}
