@@ -2,7 +2,6 @@
 
 public var ingredient: Ingredient;
 public var amount = 10;
-public var sprite: GameObject;
 
 function OnMouseDown () {
 
@@ -18,6 +17,6 @@ function OnMouseDown () {
 
 function UpdateSprite () {
 	
-	var scale = amount / 10f;
-	sprite.transform.localScale = new Vector3(scale, scale, scale);
+//	var scale = amount / 10f;
+//	sprite.transform.localScale = new Vector3(scale, scale, scale);
 }

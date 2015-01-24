@@ -1,0 +1,476 @@
+fileFormatVersion: 2
+guid: 8989954b3252c59429e4598060021138
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: game art_6
+    21300002: game art_7
+    21300004: game art_8
+    21300006: game art_9
+    21300008: game art_10
+    21300010: game art_11
+    21300012: game art_12
+    21300014: game art_15
+    21300016: game art_16
+    21300018: game art_18
+    21300020: game art_19
+    21300022: game art_20
+    21300024: game art_21
+    21300026: game art_22
+    21300028: game art_23
+    21300030: game art_24
+    21300032: game art_25
+    21300034: game art_26
+    21300036: game art_27
+    21300038: game art_28
+    21300040: game art_29
+    21300042: game art_30
+    21300044: game art_31
+    21300046: game art_32
+    21300048: game art_33
+    21300050: game art_34
+    21300052: game art_35
+    21300054: game art_38
+    21300056: game art_39
+    21300058: game art_40
+    21300060: game art_49
+    21300062: game art_50
+    21300064: game art_51
+    21300066: game art_53
+    21300068: game art_43
+    21300070: game art_41
+    21300072: game art_42
+    21300074: game art_43
+    21300076: game art_38
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: game art_6
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 3356
+        width: 153
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_7
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 3356
+        width: 151
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_8
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 2460
+        width: 1368
+        height: 977
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_9
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 2565
+        width: 1367
+        height: 769
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_10
+      rect:
+        serializedVersion: 2
+        x: 3821
+        y: 3013
+        width: 289
+        height: 289
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_11
+      rect:
+        serializedVersion: 2
+        x: 4211
+        y: 3013
+        width: 289
+        height: 289
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_12
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 3027
+        width: 290
+        height: 291
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_15
+      rect:
+        serializedVersion: 2
+        x: 4234
+        y: 2645
+        width: 291
+        height: 292
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_16
+      rect:
+        serializedVersion: 2
+        x: 4633
+        y: 2634
+        width: 290
+        height: 292
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_18
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 1773
+        width: 566
+        height: 558
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_19
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 1812
+        width: 523
+        height: 501
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_20
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1826
+        width: 521
+        height: 500
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_21
+      rect:
+        serializedVersion: 2
+        x: 3912
+        y: 2219
+        width: 167
+        height: 167
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_22
+      rect:
+        serializedVersion: 2
+        x: 4297
+        y: 2219
+        width: 166
+        height: 167
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_23
+      rect:
+        serializedVersion: 2
+        x: 4691
+        y: 2219
+        width: 166
+        height: 167
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_24
+      rect:
+        serializedVersion: 2
+        x: 3912
+        y: 1967
+        width: 167
+        height: 166
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_25
+      rect:
+        serializedVersion: 2
+        x: 4298
+        y: 1962
+        width: 167
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_26
+      rect:
+        serializedVersion: 2
+        x: 4691
+        y: 1962
+        width: 166
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_27
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 1246
+        width: 472
+        height: 460
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_28
+      rect:
+        serializedVersion: 2
+        x: 3052
+        y: 1242
+        width: 472
+        height: 458
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_29
+      rect:
+        serializedVersion: 2
+        x: 3859
+        y: 1569
+        width: 313
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_30
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 1569
+        width: 313
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_31
+      rect:
+        serializedVersion: 2
+        x: 4650
+        y: 1569
+        width: 314
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 1367
+        height: 782
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_33
+      rect:
+        serializedVersion: 2
+        x: 3859
+        y: 1266
+        width: 313
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_34
+      rect:
+        serializedVersion: 2
+        x: 4299
+        y: 1266
+        width: 313
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_35
+      rect:
+        serializedVersion: 2
+        x: 4673
+        y: 1266
+        width: 313
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_38
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 851
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_39
+      rect:
+        serializedVersion: 2
+        x: 4282
+        y: 851
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_40
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 851
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_49
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 536
+        width: 241
+        height: 239
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_50
+      rect:
+        serializedVersion: 2
+        x: 4286
+        y: 536
+        width: 240
+        height: 239
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_51
+      rect:
+        serializedVersion: 2
+        x: 4707
+        y: 536
+        width: 240
+        height: 239
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_53
+      rect:
+        serializedVersion: 2
+        x: 3104
+        y: 45
+        width: 487
+        height: 482
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_43
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 1
+        width: 586
+        height: 501
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_41
+      rect:
+        serializedVersion: 2
+        x: 3832
+        y: 2588
+        width: 354
+        height: 354
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_42
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 612
+        width: 613
+        height: 518
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_43
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 612
+        width: 598
+        height: 518
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: game art_38
+      rect:
+        serializedVersion: 2
+        x: 3761
+        y: 3416
+        width: 326
+        height: 126
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
