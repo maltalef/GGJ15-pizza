@@ -2,6 +2,10 @@
 
 public var ingredient: Ingredient;
 public var amount = 10;
+var replacement = false;
+
+
+var states: Sprite[];
 
 function OnMouseDown () {
 
@@ -10,13 +14,15 @@ function OnMouseDown () {
 	
 	if (ingredient.CanUse()) {
 		amount--;
-		ingredient.Use(true);
+		ingredient.Use(replacement);
 		UpdateSprite();
 	}
 }
 
 function UpdateSprite () {
 	
-//	var scale = amount / 10f;
-//	sprite.transform.localScale = new Vector3(scale, scale, scale);
+	// depending on the amount, choose a different sprite (from the 'states' array)
+	var i = ((amount == 0) ? 0 : (amount > 5 ? 2 : 1));
+	GetComponent(SpriteRenderer).sprite = states[i];
+	
 }
