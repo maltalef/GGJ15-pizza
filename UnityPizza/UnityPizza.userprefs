@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pizza.js">
+    <Files>
+      <File FileName="Assets/Scripts/IngredientContainer.js" Line="4" Column="11" />
+      <File FileName="Assets/Scripts/Game.js" Line="22" Column="4" />
+      <File FileName="Assets/Scripts/Pizza.js" Line="27" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

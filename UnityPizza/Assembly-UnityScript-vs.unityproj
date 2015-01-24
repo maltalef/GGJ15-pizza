@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{7DE078EB-2F39-F993-2289-9B8566FB6AB9}</ProjectGuid>
+	<ProjectGuid>{FCA294C6-1508-11C8-863D-938D745A2F17}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\DoughContainer.js" />
+     <Compile Include="Assets\Scripts\DiscardButton.js" />
      <Compile Include="Assets\Scripts\Game.js" />
+     <Compile Include="Assets\Scripts\IngredientContainer.js" />
+     <Compile Include="Assets\Scripts\Pizza.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
