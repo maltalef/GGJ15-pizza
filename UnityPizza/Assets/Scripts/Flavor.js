@@ -6,8 +6,6 @@ public var flavorName: String;
 
 function Check (currentIngredients: Array) : boolean {
 	
-	Debug.Log("voy a probar la pizza de "+flavorName);
-	
 	if (ingredients.Length != currentIngredients.length)
 		return false;
 	

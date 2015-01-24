@@ -34,6 +34,9 @@ function ResetIngredients () {
 	onion.Reset();
 	
 	ingredients = new Array();
+	
+	OrderManager.Instance().DiscardOrder();
+	OrderManager.Instance().GenerateOrder();
 }
 
 function Send () {
@@ -42,7 +45,14 @@ function Send () {
 	
 	var ok = flavor.Check(ingredients);
 	
-	Debug.Log("hola, todo salio "+(ok?"bien":"mal")+" y son las "+Time.time);
+	
+	
+//	ESTO ESTA MUY MAL NO SIRVE
+	Game.Instance().SetText2(ok ? "BIEN!!" : "MALLLLL");
+	
+	// hacer algo con el ok
+	
+	
 
 	ResetIngredients();
 }
