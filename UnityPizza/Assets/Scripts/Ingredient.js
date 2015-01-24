@@ -5,10 +5,8 @@ var extra : GameObject;
 var replacement : GameObject;
 var extraReplacement : GameObject;
 
-
+var someNumber: int;
 var amountUsed = 0;
-
-var container: IngredientContainer;
 
 function CanUse () : boolean {
 	return amountUsed < 2;
@@ -30,6 +28,8 @@ function Use (useReplacement: boolean) {
 	}
 	
 	theGameObject.renderer.enabled = true;
+	
+	Pizza.Instance().AddIngredient(this);
 }
 
 function Reset () {

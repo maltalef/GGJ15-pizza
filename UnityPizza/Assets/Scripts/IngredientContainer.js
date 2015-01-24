@@ -14,9 +14,6 @@ function OnMouseDown () {
 		ingredient.Use(true);
 		UpdateSprite();
 	}
-		
-	
-	
 }
 
 function UpdateSprite () {

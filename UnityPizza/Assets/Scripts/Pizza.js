@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
-//var ingredients = new Array();
+var ingredients: Array = new Array();
+
 var dough: GameObject;
 
 var cheese: Ingredient;
@@ -31,4 +32,21 @@ function ResetIngredients () {
 	sauce.Reset();
 	olive.Reset();
 	onion.Reset();
+	
+	ingredients = new Array();
+}
+
+function Send () {
+
+	var flavor = OrderManager.Instance().CurrentOrder().flavor;
+	
+	var ok = flavor.Check(ingredients);
+	
+	Debug.Log("hola, todo salio "+(ok?"bien":"mal")+" y son las "+Time.time);
+
+	ResetIngredients();
+}
+
+function AddIngredient (ingredient: Ingredient) {
+	ingredients.Push(ingredient);
 }
