@@ -29,5 +29,7 @@ function UpdateSprite () {
 
 function Refill (amountAdded: int) {
 	amount += amountAdded;
+	if (amount > 100)
+		amount = 100; // ingredient max amount
 	UpdateSprite();
 }
