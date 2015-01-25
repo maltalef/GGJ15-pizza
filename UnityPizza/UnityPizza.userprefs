@@ -1,17 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ColorTextManager.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game.js">
     <Files>
       <File FileName="Assets/Scripts/SendButton.js" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Pizza.js" Line="66" Column="57" />
       <File FileName="Assets/Scripts/DiscardButton.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Game.js" Line="70" Column="43" />
+      <File FileName="Assets/Scripts/Game.js" Line="119" Column="58" />
       <File FileName="Assets/Scripts/Ingredient.js" Line="4" Column="1" />
       <File FileName="Assets/Scripts/IngredientContainer.js" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ColorText.js" Line="6" Column="1" />
       <File FileName="Assets/Scripts/ColorTextManager.js" Line="22" Column="41" />
       <File FileName="Assets/Scripts/Flavor.js" Line="5" Column="31" />
       <File FileName="Assets/Scripts/OrderManager.js" Line="27" Column="2" />
+      <File FileName="Assets/Scripts/Intro.js" Line="19" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

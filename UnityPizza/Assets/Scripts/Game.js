@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+var cameraAudio : AudioSource;
+
 var pizzaButtons: GameObject[];
 
 var currentPizzaText: UI.Text;
@@ -14,6 +16,8 @@ var level = 0; // basically, it's just the current index for the checkpoints and
 var checkpoints = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 36, 42, 48, 54, 60, 69, 78, 87, 100];
 var refills = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 6, 6, 6, 6, 6, 9, 9, 9, 9];
 var completedPizzas: int = 0;
+var completedPizzasSinceStart: int = 0;
+
 
 var ingredientContainers: Object[];
 
@@ -51,7 +55,10 @@ function TimeRanOut () {
 
 function PizzaDone (correct: boolean, usingDirty: boolean, dirtyIngredient: Ingredient) {
 
-	completedPizzas++;
+	if (correct) {
+		completedPizzas++;
+		completedPizzasSinceStart++;
+	}
 	
 	var announcer = ColorTextManager.Instance();
 	
@@ -113,10 +120,10 @@ function UpdateTexts () {
 	timerText.text = strTime;
 	
 	// PIZZAS DONE TEXT
-	pizzasDoneText.text = "done: "+completedPizzas;
+	pizzasDoneText.text = "done: "+completedPizzasSinceStart;
 	
 	// NEXT REFILL TEXT
-	nextRefillText.text = "next refill: "+(checkpoints[level] - completedPizzas);
+	nextRefillText.text = "next refill: "+(checkpoints[level] - completedPizzas)+" pizzas";
 	
 	// ORDERS
 	currentPizzaText.text = ""+OrderManager.Instance().CurrentOrder().flavor.flavorName;
@@ -142,4 +149,8 @@ function SetPizzaButtonsEnabled (enabled: boolean) {
 		if (circleCollider)
 			circleCollider.enabled = enabled;
 	}
+}
+
+function HurryUp () {
+//	cameraAudio.clip = 
 }

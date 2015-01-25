@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 public var ingredient: Ingredient;
-public var amount = 10;
+public var amount = 5;
 var replacement = false;
 
 
@@ -22,9 +22,13 @@ function OnMouseDown () {
 function UpdateSprite () {
 	
 	// depending on the amount, choose a different sprite (from the 'states' array)
-	var i = ((amount == 0) ? 0 : (amount > 5 ? 2 : 1));
+	var i = 0;
+	if (states.Length == 3) {
+		i = ((amount == 0) ? 0 : (amount >= 5 ? 2 : 1));
+	} else if (states.Length == 4) {
+		i = ((amount == 0) ? 0 : (amount == 1 ? 1 : (amount >= 5 ? 3 : 2)));
+	}
 	GetComponent(SpriteRenderer).sprite = states[i];
-	
 }
 
 function Refill (amountAdded: int) {

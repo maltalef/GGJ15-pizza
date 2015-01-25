@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Ingredient.js" />
      <Compile Include="Assets\Scripts\IngredientContainer.js" />
      <Compile Include="Assets\Scripts\Intro.js" />
+     <Compile Include="Assets\Scripts\MaydayButton.js" />
      <Compile Include="Assets\Scripts\Order.js" />
      <Compile Include="Assets\Scripts\OrderManager.js" />
      <Compile Include="Assets\Scripts\Pizza.js" />
