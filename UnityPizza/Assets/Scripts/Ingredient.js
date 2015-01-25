@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+var colorText: ColorText; // this is for when you use the dirty version (aka replacement)
+
 var normal : GameObject;
 var extra : GameObject;
 var replacement : GameObject;

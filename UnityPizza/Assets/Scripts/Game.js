@@ -50,12 +50,26 @@ function TimeRanOut () {
 }
 
 function PizzaDone (correct: boolean, usingDirty: boolean) {
+
 	completedPizzas++;
 	
-	if (correct && !usingDirty)
+	var announcer = ColorTextManager.Instance();
+	
+	if (correct && !usingDirty) {
 		timeLeft += 5;
-	else if (!correct)
+		announcer.AnnounceRandom(true);
+	} else if (!correct) {
 		timeLeft -= 5;
+		announcer.AnnounceRandom(false);
+	} else { // correct but dirty
+	
+// slimy - salsa
+// harsh - queso
+// tangy - cebolla
+// crunchy - cucas
+//		announcer.Announce(INGRE);
+		
+	}
 	
 	if (completedPizzas >= checkpoints[level]) {
 		if (level == checkpoints.Length - 1)
@@ -72,6 +86,7 @@ function PizzaDone (correct: boolean, usingDirty: boolean) {
 }
 
 function DoRefills(desperateRefill: boolean) {
+	ColorTextManager.Instance().AnnounceRefill();
 	if (desperateRefill) {
 		// what?
 	} else {
