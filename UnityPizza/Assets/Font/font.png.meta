@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 2691e6a7818c5a645a8184e1674ae6fc
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: font_0
+    21300002: font_2
+    21300004: font_6
+    21300006: font_8
+    21300008: font_10
+    21300010: font_12
+    21300012: font_14
+    21300014: font_16
+    21300016: font_18
+    21300018: font_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: font_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 931
+        width: 500
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_2
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 942
+        width: 370
+        height: 110
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_6
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 746
+        width: 386
+        height: 127
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 542
+        width: 291
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_10
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 521
+        width: 379
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 272
+        width: 443
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_14
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 274
+        width: 322
+        height: 106
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 310
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_18
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 10
+        width: 496
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: font_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 746
+        width: 364
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

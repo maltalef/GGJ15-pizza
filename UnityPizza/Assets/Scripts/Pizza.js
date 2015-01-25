@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+var anim: Animator;
+
 var usingDirty: boolean;
 
 var ingredients: Array = new Array();
@@ -30,10 +32,7 @@ function Start () {
 
 function ResetIngredients () {
 	
-	cheese.Reset();
-	sauce.Reset();
-	olive.Reset();
-	onion.Reset();
+
 	
 	ingredients = new Array();
 	
@@ -43,7 +42,16 @@ function ResetIngredients () {
 	OrderManager.Instance().GenerateOrder();
 }
 
+function ClearIngredientSprites () {
+	cheese.Reset();
+	sauce.Reset();
+	olive.Reset();
+	onion.Reset();
+}
+
 function Send () {
+
+	anim.SetTrigger("PizzaInOutTrigger");
 
 	var flavor = OrderManager.Instance().CurrentOrder().flavor;
 	
