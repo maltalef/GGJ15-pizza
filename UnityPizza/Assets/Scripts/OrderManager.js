@@ -17,8 +17,6 @@ function Start () {
 	GenerateOrder();
 	GenerateOrder();
 	GenerateOrder();
-	
-	UpdateTextCualquiera();
 }
 
 // SINGLETON END
@@ -37,13 +35,12 @@ function CurrentOrder () : Order {
 	return orders[0] as Order;
 }
 
-function DiscardOrder () {
-	orders.RemoveAt(0);
-	UpdateTextCualquiera();
+function NextOrder () : Order {
+
+	return orders[1] as Order;
 }
 
-
-function UpdateTextCualquiera() {
-	Game.Instance().SetText((orders[0] as Order).flavor.flavorName+" => "+(orders[1] as Order).flavor.flavorName);
+function DiscardOrder () {
+	orders.RemoveAt(0);
 }
 

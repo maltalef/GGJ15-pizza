@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+var usingDirty: boolean;
+
 var ingredients: Array = new Array();
 
 var dough: GameObject;
@@ -35,6 +37,8 @@ function ResetIngredients () {
 	
 	ingredients = new Array();
 	
+	usingDirty = false;
+	
 	OrderManager.Instance().DiscardOrder();
 	OrderManager.Instance().GenerateOrder();
 }
@@ -45,18 +49,13 @@ function Send () {
 	
 	var ok = flavor.Check(ingredients);
 	
+	Game.Instance().PizzaDone(ok, usingDirty);
 	
-	
-//	ESTO ESTA MUY MAL NO SIRVE
-	Game.Instance().SetText2(ok ? "BIEN!!" : "MALLLLL");
-	
-	// hacer algo con el ok
-	
-	
-
 	ResetIngredients();
 }
 
-function AddIngredient (ingredient: Ingredient) {
+function AddIngredient (ingredient: Ingredient, isDirty: boolean) {
 	ingredients.Push(ingredient);
+	if (isDirty)
+		usingDirty = true;
 }

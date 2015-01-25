@@ -26,3 +26,8 @@ function UpdateSprite () {
 	GetComponent(SpriteRenderer).sprite = states[i];
 	
 }
+
+function Refill (amountAdded: int) {
+	amount += amountAdded;
+	UpdateSprite();
+}

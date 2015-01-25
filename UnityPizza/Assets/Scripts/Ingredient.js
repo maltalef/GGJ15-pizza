@@ -29,7 +29,7 @@ function Use (useReplacement: boolean) {
 	
 	theGameObject.renderer.enabled = true;
 	
-	Pizza.Instance().AddIngredient(this);
+	Pizza.Instance().AddIngredient(this, useReplacement);
 }
 
 function Reset () {
