@@ -30,9 +30,15 @@ function Start () {
 
 // SINGLETON END
 
+function AnimationFinished () {
+	Game.Instance().EnablePizzaButtons();
+}
+
 function ResetIngredients () {
 	
-
+	Game.Instance().DisablePizzaButtons();
+	
+	anim.SetTrigger("PizzaInOutTrigger");
 	
 	ingredients = new Array();
 	
@@ -50,8 +56,6 @@ function ClearIngredientSprites () {
 }
 
 function Send () {
-
-	anim.SetTrigger("PizzaInOutTrigger");
 
 	var flavor = OrderManager.Instance().CurrentOrder().flavor;
 	

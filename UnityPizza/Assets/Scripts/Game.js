@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+var pizzaButtons: GameObject[];
+
 var currentPizzaText: UI.Text;
 var nextPizzaText: UI.Text;
 var timerText: UI.Text;
@@ -59,6 +61,8 @@ function PizzaDone (correct: boolean, usingDirty: boolean) {
 			level++;
 		}
 	}
+	
+	
 }
 
 function DoRefills(desperateRefill: boolean) {
@@ -97,3 +101,23 @@ function UpdateTexts () {
 	   nextPizzaText.text =    "next pizza: "+OrderManager.Instance().NextOrder()   .flavor.flavorName;
 }
 
+function EnablePizzaButtons() {
+	SetPizzaButtonsEnabled(true);
+}
+
+function DisablePizzaButtons() {
+	SetPizzaButtonsEnabled(false);
+}
+
+function SetPizzaButtonsEnabled (enabled: boolean) {
+	for (var i = 0; i < pizzaButtons.length; i++) {
+	
+		var boxCollider = pizzaButtons[i].GetComponent(BoxCollider2D);
+		if (boxCollider)
+			boxCollider.enabled = enabled;
+			
+		var circleCollider = pizzaButtons[i].GetComponent(CircleCollider2D);
+		if (circleCollider)
+			circleCollider.enabled = enabled;
+	}
+}
