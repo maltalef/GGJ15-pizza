@@ -52,6 +52,11 @@ function TimeRanOut () {
 function PizzaDone (correct: boolean, usingDirty: boolean) {
 	completedPizzas++;
 	
+	if (correct && !usingDirty)
+		timeLeft += 5;
+	else if (!correct)
+		timeLeft -= 5;
+	
 	if (completedPizzas >= checkpoints[level]) {
 		if (level == checkpoints.Length - 1)
 			WinGame();
@@ -59,6 +64,7 @@ function PizzaDone (correct: boolean, usingDirty: boolean) {
 			DoRefills(false);
 			completedPizzas = 0;
 			level++;
+			timeLeft += 30;
 		}
 	}
 	
@@ -88,17 +94,17 @@ function UpdateTexts () {
 	var seconds = totalSeconds % 60;
 	var minutes = totalSeconds / 60;
 	var strTime = minutes.ToString("00")+":"+seconds.ToString("00");
-	timerText.text = "time left: "+strTime;
+	timerText.text = strTime;
 	
 	// PIZZAS DONE TEXT
-	pizzasDoneText.text = "pizzas done: "+completedPizzas;
+	pizzasDoneText.text = "done: "+completedPizzas;
 	
 	// NEXT REFILL TEXT
 	nextRefillText.text = "next refill: "+(checkpoints[level] - completedPizzas);
 	
 	// ORDERS
-	currentPizzaText.text = "current pizza: "+OrderManager.Instance().CurrentOrder().flavor.flavorName;
-	   nextPizzaText.text =    "next pizza: "+OrderManager.Instance().NextOrder()   .flavor.flavorName;
+	currentPizzaText.text = ""+OrderManager.Instance().CurrentOrder().flavor.flavorName;
+	   nextPizzaText.text =    "next: "+OrderManager.Instance().NextOrder()   .flavor.flavorName;
 }
 
 function EnablePizzaButtons() {
