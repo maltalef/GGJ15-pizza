@@ -46,7 +46,7 @@ function Update () {
 }
 
 function TimeRanOut () {
-	
+	Application.LoadLevel("lose");
 }
 
 function PizzaDone (correct: boolean, usingDirty: boolean, dirtyIngredient: Ingredient) {
@@ -99,7 +99,8 @@ function DoRefills(desperateRefill: boolean) {
 }
 
 function WinGame() {
-	// WIN THE GAME? haha oh wow
+	// i cant belive i won
+	Application.LoadLevel("win");
 }
 
 function UpdateTexts () {
