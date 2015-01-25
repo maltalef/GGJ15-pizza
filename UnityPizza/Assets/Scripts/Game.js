@@ -49,7 +49,7 @@ function TimeRanOut () {
 	
 }
 
-function PizzaDone (correct: boolean, usingDirty: boolean) {
+function PizzaDone (correct: boolean, usingDirty: boolean, dirtyIngredient: Ingredient) {
 
 	completedPizzas++;
 	
@@ -67,7 +67,7 @@ function PizzaDone (correct: boolean, usingDirty: boolean) {
 // harsh - queso
 // tangy - cebolla
 // crunchy - cucas
-//		announcer.Announce(INGRE);
+		announcer.AnnounceFlavor(dirtyIngredient);
 		
 	}
 	

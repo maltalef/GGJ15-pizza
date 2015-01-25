@@ -4,6 +4,8 @@ var anim: Animator;
 
 var usingDirty: boolean;
 
+var dirtyIngredient: Ingredient;
+
 var ingredients: Array = new Array();
 
 var dough: GameObject;
@@ -61,13 +63,15 @@ function Send () {
 	
 	var ok = flavor.Check(ingredients);
 	
-	Game.Instance().PizzaDone(ok, usingDirty);
+	Game.Instance().PizzaDone(ok, usingDirty, usingDirty ? dirtyIngredient : null);
 	
 	ResetIngredients();
 }
 
 function AddIngredient (ingredient: Ingredient, isDirty: boolean) {
 	ingredients.Push(ingredient);
-	if (isDirty)
+	if (isDirty) {
 		usingDirty = true;
+		dirtyIngredient = ingredient;
+	}
 }
