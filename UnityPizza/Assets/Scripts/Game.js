@@ -19,6 +19,10 @@ var completedPizzas: int = 0;
 var completedPizzasSinceStart: int = 0;
 
 
+var currentPizzaTextAside = false;
+var currentPizzaTextAnim: Animator;
+
+
 var ingredientContainers: Object[];
 
 // SINGLETON START
@@ -126,8 +130,19 @@ function UpdateTexts () {
 	nextRefillText.text = "next refill: "+(checkpoints[level] - completedPizzas)+" pizzas";
 	
 	// ORDERS
-	currentPizzaText.text = ""+OrderManager.Instance().CurrentOrder().flavor.flavorName;
-	   nextPizzaText.text =    "next: "+OrderManager.Instance().NextOrder()   .flavor.flavorName;
+	currentPizzaText.text = ""+		 OrderManager.Instance().CurrentOrder().flavor.flavorName;
+	   nextPizzaText.text = "next: "+OrderManager.Instance().NextOrder()   .flavor.flavorName;
+	
+	var pizzaChars = currentPizzaText.text.Length + nextPizzaText.text.Length;
+	
+	var aside = pizzaChars > 38;
+	if (currentPizzaTextAside != aside) {
+		currentPizzaTextAnim.SetTrigger("Toggle");
+		currentPizzaTextAside = aside;
+	}
+		
+		
+	Debug.Log(pizzaChars+" _ "+Time.time);
 }
 
 function EnablePizzaButtons() {

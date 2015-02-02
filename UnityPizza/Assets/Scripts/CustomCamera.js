@@ -1,21 +1,27 @@
 ﻿#pragma strict
 
-// http://gamedev.stackexchange.com/a/89973/12103
+var screenLimits: BoxCollider2D;
+var lastAspect: float;
 
-// background is 1122 x 631 px
-// in world units, it should be 11.22 x 6.31
-// alas, it's something else.
-// whatever :)
-
-var background: SpriteRenderer;
+function Update () {
+	if (camera.aspect != lastAspect)
+		AdjustCamera();
+}
 
 function Start () {
+	AdjustCamera();
+}
+
+function AdjustCamera () {
+	lastAspect = camera.aspect;
 	
-	var width = background.bounds.extents.x * 2;
-	var height = background.bounds.extents.y * 2;
+	var extents = screenLimits.bounds.extents;
 	
-	var ortho = width / camera.aspect / 2f;
-	if (ortho < height / 2f)
-		ortho = height / 2f;
-	camera.orthographicSize = ortho;//1f / camera.aspect * width / 2f;
+	var halfWidth = extents.x;
+	var halfHeight = extents.y;
+	
+	var ortho = halfWidth / camera.aspect;
+	if (ortho < halfHeight)
+		ortho = halfHeight;
+	camera.orthographicSize = ortho;
 }
