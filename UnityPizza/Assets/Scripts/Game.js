@@ -6,6 +6,8 @@ static var BGM_CHANGE_WAIT = 10f;
 
 var bigTime00: GameObject;
 
+var timeToSwitchScreen: float = -1f;
+
 var normalBGM: AudioClip;
 var fastBGM: AudioClip;
 
@@ -62,7 +64,6 @@ function Awake () {
 // SINGLETON END
 
 function Start () {
-checkpoints = [3, 6, 9, 12];
 	ingredientContainers = FindObjectsOfType(IngredientContainer);
 	originalVolume = cameraAudio.volume;
 }
@@ -71,9 +72,14 @@ function Update () {
 
 	timeLeft -= Time.deltaTime;
 	
+	if (timeToSwitchScreen != -1 && Time.time > timeToSwitchScreen)
+		LoseGame();
+	
 	if (timeLeft <= 0) {
-		if (!alreadyLostTheGame)
+		if (!alreadyLostTheGame) {
+			timeToSwitchScreen = Time.time + 1.25f; // lame last-minute attempt to fix strange bug
 			TimeRanOut();
+		}
 	} else {
 		UpdateTexts();
 	}
@@ -114,8 +120,8 @@ function TimeRanOut () {
 	cameraAudio.pitch = 0.5f;
 	
 	alreadyLostTheGame = true;
-	bigTime00.active = true;
-	timerText.gameObject.active = false;
+	bigTime00.SetActive(true);
+	timerText.gameObject.SetActive(false);
 	bigTime00.GetComponent(Animator).SetTrigger("Enlarge");
 }
 
