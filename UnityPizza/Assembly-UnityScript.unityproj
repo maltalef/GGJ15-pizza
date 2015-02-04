@@ -54,13 +54,16 @@
      <Compile Include="Assets\Scripts\Game.js" />
      <Compile Include="Assets\Scripts\Ingredient.js" />
      <Compile Include="Assets\Scripts\IngredientContainer.js" />
-     <Compile Include="Assets\Scripts\Intro.js" />
      <Compile Include="Assets\Scripts\MaydayButton.js" />
      <Compile Include="Assets\Scripts\Order.js" />
      <Compile Include="Assets\Scripts\OrderManager.js" />
      <Compile Include="Assets\Scripts\Pizza.js" />
      <Compile Include="Assets\Scripts\SendButton.js" />
      <Compile Include="Assets\Scripts\SoundButton.js" />
+     <Compile Include="Assets\Scripts\SoundButtonCanvas.js" />
+     <Compile Include="Assets\Scripts\StaticScreenManager.js" />
+     <Compile Include="Assets\Scripts\Time00.js" />
+     <Compile Include="Assets\Scripts\WaitBeforeContinue.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

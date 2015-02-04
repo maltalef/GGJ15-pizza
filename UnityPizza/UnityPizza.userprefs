@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game.js">
     <Files>
-      <File FileName="Assets/Scripts/CustomCamera.js" Line="6" Column="21" />
-      <File FileName="Assets/Scripts/Game.js" Line="47" Column="27" />
-      <File FileName="Assets/Scripts/Ingredient.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/IngredientContainer.js" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/Game.js" Line="113" Column="57" />
+      <File FileName="Assets/Scripts/SoundButton.js" Line="24" Column="27" />
+      <File FileName="Assets/Scripts/DiscardButton.js" Line="5" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

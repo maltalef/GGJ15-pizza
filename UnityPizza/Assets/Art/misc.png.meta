@@ -7,6 +7,7 @@ TextureImporter:
     21300004: background
     21300006: sound-on
     21300008: sound-off
+    21300010: 00time
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,7 +53,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 176
         width: 170
         height: 66
       alignment: 0
@@ -62,7 +63,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 269
-        y: 0
+        y: 176
         width: 170
         height: 66
       alignment: 0
@@ -72,7 +73,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
+        y: 242
         width: 1680
         height: 614
       alignment: 0
@@ -82,7 +83,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 456
-        y: 0
+        y: 176
         width: 76
         height: 66
       alignment: 0
@@ -92,9 +93,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 556
-        y: 0
+        y: 176
         width: 76
         height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 00time
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 2
+        width: 1024
+        height: 237
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

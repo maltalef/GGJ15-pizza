@@ -1,5 +1,22 @@
 ﻿#pragma strict
 
+static var HURRY_TIME = 15f;
+static var SLOW_TIME = 20f;
+static var BGM_CHANGE_WAIT = 10f;
+
+var bigTime00: GameObject;
+
+var normalBGM: AudioClip;
+var fastBGM: AudioClip;
+
+
+var fastBGMIsPlaying = false;
+var lastTimeBGMChanged: float;
+
+var hurryUpSource: AudioSource;
+
+var originalVolume: float;
+
 var cameraAudio : AudioSource;
 
 var pizzaButtons: GameObject[];
@@ -22,8 +39,13 @@ var completedPizzasSinceStart: int = 0;
 var currentPizzaTextAside = false;
 var currentPizzaTextAnim: Animator;
 
+var slowingDown = false;
+var hurryingUp = false;
+
 
 var ingredientContainers: Object[];
+
+var alreadyLostTheGame = false;
 
 // SINGLETON START
 
@@ -40,21 +62,61 @@ function Awake () {
 // SINGLETON END
 
 function Start () {
+checkpoints = [3, 6, 9, 12];
 	ingredientContainers = FindObjectsOfType(IngredientContainer);
+	originalVolume = cameraAudio.volume;
 }
 
 function Update () {
+
 	timeLeft -= Time.deltaTime;
 	
-	if (timeLeft <= 0)
-		TimeRanOut();
-	else {
+	if (timeLeft <= 0) {
+		if (!alreadyLostTheGame)
+			TimeRanOut();
+	} else {
 		UpdateTexts();
+	}
+	
+	if (alreadyLostTheGame)
+		return;
+	
+	if (slowingDown) {
+		cameraAudio.pitch -= Time.deltaTime * 0.3f;
+		if (cameraAudio.pitch <= 0.75f)
+			cameraAudio.volume -= Time.deltaTime * 0.6f;
+		if (cameraAudio.pitch <= 0.5f)
+			FinishSlowingDown();
+	}
+	
+	if (hurryingUp && !hurryUpSource.isPlaying) {
+		hurryingUp = false;
+		cameraAudio.Play();
+	}
+	
+	
+	var shouldChangeBGM = (fastBGMIsPlaying && timeLeft >= SLOW_TIME) || (!fastBGMIsPlaying && timeLeft <= HURRY_TIME);
+	if (shouldChangeBGM && Time.time - lastTimeBGMChanged > BGM_CHANGE_WAIT) { // 10 seconds between each music change
+		lastTimeBGMChanged = Time.time;
+		if (fastBGMIsPlaying)
+			StartSlowingDown();
+		else
+			HurryUp();
 	}
 }
 
+function LoseGame () {
+	StaticScreenManager.what = StaticScreenManager.LOSE;
+	Application.LoadLevel("Static");
+}
+
 function TimeRanOut () {
-	Application.LoadLevel("lose");
+	cameraAudio.pitch = 0.5f;
+	
+	alreadyLostTheGame = true;
+	bigTime00.active = true;
+	timerText.gameObject.active = false;
+	bigTime00.GetComponent(Animator).SetTrigger("Enlarge");
 }
 
 function PizzaDone (correct: boolean, usingDirty: boolean, dirtyIngredient: Ingredient) {
@@ -68,9 +130,11 @@ function PizzaDone (correct: boolean, usingDirty: boolean, dirtyIngredient: Ingr
 	
 	if (correct && !usingDirty) {
 		timeLeft += 5;
+		timerText.gameObject.GetComponent(Animator).SetTrigger("TimeAdd");
 		announcer.AnnounceRandom(true);
 	} else if (!correct) {
 		timeLeft -= 5;
+		timerText.gameObject.GetComponent(Animator).SetTrigger("TimeSubtract");
 		announcer.AnnounceRandom(false);
 	} else { // correct but dirty
 	
@@ -90,6 +154,7 @@ function PizzaDone (correct: boolean, usingDirty: boolean, dirtyIngredient: Ingr
 			completedPizzas = 0;
 			level++;
 			timeLeft += 30;
+			timerText.gameObject.GetComponent(Animator).SetTrigger("TimeAdd");
 		}
 	}
 	
@@ -111,13 +176,14 @@ function DoRefills(desperateRefill: boolean) {
 
 function WinGame() {
 	// i cant belive i won
-	Application.LoadLevel("win");
+	StaticScreenManager.what = StaticScreenManager.WIN;
+	Application.LoadLevel("Static");
 }
 
 function UpdateTexts () {
 
 	// TIMER TEXT
-	var totalSeconds : int = Mathf.Floor(timeLeft); // NEEDS to be int
+	var totalSeconds : int = Mathf.Ceil(timeLeft); // NEEDS to be int
 	var seconds = totalSeconds % 60;
 	var minutes = totalSeconds / 60;
 	var strTime = minutes.ToString("00")+":"+seconds.ToString("00");
@@ -140,9 +206,6 @@ function UpdateTexts () {
 		currentPizzaTextAnim.SetTrigger("Toggle");
 		currentPizzaTextAside = aside;
 	}
-		
-		
-	Debug.Log(pizzaChars+" _ "+Time.time);
 }
 
 function EnablePizzaButtons() {
@@ -167,5 +230,28 @@ function SetPizzaButtonsEnabled (enabled: boolean) {
 }
 
 function HurryUp () {
-//	cameraAudio.clip = 
+	
+	fastBGMIsPlaying = true;
+	hurryingUp = true;
+	
+	cameraAudio.Stop();
+	cameraAudio.clip = fastBGM;
+	hurryUpSource.Play();
+	
+}
+
+function StartSlowingDown () {
+	fastBGMIsPlaying = false;
+	slowingDown = true;
+	
+}
+
+function FinishSlowingDown () {
+
+	slowingDown = false;
+	
+	cameraAudio.clip = normalBGM;
+	cameraAudio.pitch = 1f;
+	cameraAudio.volume = originalVolume;
+	cameraAudio.Play();
 }
