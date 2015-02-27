@@ -48,6 +48,8 @@ function ResetIngredients () {
 	
 	OrderManager.Instance().DiscardOrder();
 	OrderManager.Instance().GenerateOrder();
+	
+	Game.Instance().IngredientsChanged();
 }
 
 function ClearIngredientSprites () {
@@ -74,4 +76,5 @@ function AddIngredient (ingredient: Ingredient, isDirty: boolean) {
 		usingDirty = true;
 		dirtyIngredient = ingredient;
 	}
+	Game.Instance().IngredientsChanged();
 }

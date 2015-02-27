@@ -4,6 +4,14 @@ static var HURRY_TIME = 15f;
 static var SLOW_TIME = 20f;
 static var BGM_CHANGE_WAIT = 10f;
 
+// hint stuff
+private var alreadyShownHint = false;
+private var timeElapsedSinceLastClickedSomething = 0.0f;
+var timeForHint = 4.0f;
+
+
+var clickToSendHint: Animator;
+
 var bigTime00: GameObject;
 
 var timeToSwitchScreen: float = -1f;
@@ -70,6 +78,15 @@ function Start () {
 
 function Update () {
 
+	if (!alreadyShownHint) {
+		if (timeElapsedSinceLastClickedSomething < timeForHint) {
+			timeElapsedSinceLastClickedSomething += Time.deltaTime;
+		} else {
+			alreadyShownHint = true;
+			clickToSendHint.SetBool("Show", true);
+		}
+	}
+
 	timeLeft -= Time.deltaTime;
 	
 	if (timeToSwitchScreen != -1 && Time.time > timeToSwitchScreen)
@@ -126,6 +143,11 @@ function TimeRanOut () {
 }
 
 function PizzaDone (correct: boolean, usingDirty: boolean, dirtyIngredient: Ingredient) {
+
+	if (!alreadyShownHint)
+		timeElapsedSinceLastClickedSomething = 0f;
+	else
+		clickToSendHint.SetBool("Show", false);
 
 	if (correct) {
 		completedPizzas++;
@@ -260,4 +282,9 @@ function FinishSlowingDown () {
 	cameraAudio.pitch = 1f;
 	cameraAudio.volume = originalVolume;
 	cameraAudio.Play();
+}
+
+function IngredientsChanged () {
+	if (!alreadyShownHint)
+		timeElapsedSinceLastClickedSomething = 0f;
 }
